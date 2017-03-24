@@ -1,0 +1,35 @@
+{
+    "name": "leonardvujanic/package",
+    "authors": [
+        {
+            "name": "leovujanic",
+            "email": "leonard.vujanic@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "files": [
+            "src/functions/functions.php"
+        ],
+        "classmap": [
+            "src/classmap",
+            "src/some-stupid-vendor"
+        ],
+        "exclude-from-classmap": [
+            "src/classmap/tests/KruTestClass.php",
+            "src/classmap/tests/*Test"
+        ],
+        "psr-0": {
+            "Vegibit\\Library\\": "src",
+            "Vegithemes\\Library\\": "src"
+        },
+        "psr-4": {
+            "degordian\\": "src/degordian",
+            "Aura\\Web\\": "path/to/aura-web/src"
+        },
+        "optimize-autoloader": true
+    },
+    "autoload-dev": {
+        "psr-4": { "MyLibrary\\Tests\\": "tests/" }
+    }
+}
